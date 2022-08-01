@@ -13,7 +13,6 @@ final class ListPostPageCell: UITableViewCell {
     @IBOutlet weak var postsBodyTextViewOutlet: UITextView!
     @IBOutlet weak var usernameLabelOutlet: UILabel!
     @IBOutlet weak var companyNameLabelOutlet: UILabel!
-    var userIDCell: Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()

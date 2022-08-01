@@ -17,6 +17,7 @@ final class DetailPostPageViewController: UIViewController {
     private let callPostCommentAPI = KAPostCommentAPI()
     private var postCommentData: [KAPostCommentResponseModel] = []
     var postIDDetailPage: Int = 0
+    var userIDDetailPage: Int = 0
     var postTitleDetailPage: String = ""
     var postBodyDetailPage: String = ""
     var userNameDetailPage: String = ""
@@ -25,14 +26,7 @@ final class DetailPostPageViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never
         detailPageDesign()
-        
-        detailPostTableView.register(
-            UINib.init(nibName:"DetailPostPageCell",bundle: nil),
-            forCellReuseIdentifier: "DetailPostPageCell"
-        )
-        detailPostTableView.delegate = self
-        detailPostTableView.dataSource = self
-        
+        detailPostPageTableViewSource()
         callPostCommentAPI.getPostCommentKA(postID: postIDDetailPage) { result in
             switch result {
             case let .success(data):
@@ -60,8 +54,19 @@ final class DetailPostPageViewController: UIViewController {
         usernameLabelOutlet.addGestureRecognizer(tap)
     }
     
+    private func detailPostPageTableViewSource() {
+        detailPostTableView.register(
+            UINib.init(nibName:"DetailPostPageCell",bundle: nil),
+            forCellReuseIdentifier: "DetailPostPageCell"
+        )
+        detailPostTableView.delegate = self
+        detailPostTableView.dataSource = self
+    }
+    
+    
     @objc func userNameTapsender(sender: UITapGestureRecognizer) {
         let userDetailPageViewController = UIStoryboard(name: "UserDetailPageViewController", bundle: nil).instantiateViewController(withIdentifier: "UserDetailPageViewController") as! UserDetailPageViewController
+        userDetailPageViewController.userIDUserDetailPage = userIDDetailPage
         self.navigationController?.pushViewController(userDetailPageViewController, animated: true)
     }
 }

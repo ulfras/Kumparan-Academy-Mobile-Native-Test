@@ -66,7 +66,6 @@ final class ListPostPageTableViewController: UITableViewController {
         let postsDataCell = postsData[indexPath.row]
         cell.postsTitleLabelOutlet.text = "Post Title: \(postsDataCell.title ?? "Post Title: ")"
         cell.postsBodyTextViewOutlet.text = "Post Body: \(postsDataCell.body ?? "Post Body: ")"
-        cell.userIDCell = postsDataCell.userID!
         for _ in postsData {
             for i in usersData {
                 if postsDataCell.userID == i.id {
@@ -75,7 +74,6 @@ final class ListPostPageTableViewController: UITableViewController {
                 }
             }
         }
-        
         return cell
     }
     
@@ -83,6 +81,7 @@ final class ListPostPageTableViewController: UITableViewController {
         let detailPostPageViewController = UIStoryboard(name: "DetailPostPageViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailPostPageViewController") as! DetailPostPageViewController
         let postsDataCell = postsData[indexPath.row]
         detailPostPageViewController.postIDDetailPage = postsDataCell.id ?? 0
+        detailPostPageViewController.userIDDetailPage = postsDataCell.userID ?? 0
         detailPostPageViewController.postTitleDetailPage = postsDataCell.title ?? "Post Title: "
         detailPostPageViewController.postBodyDetailPage = postsDataCell.body ?? "Post Body: "
         for _ in postsData {

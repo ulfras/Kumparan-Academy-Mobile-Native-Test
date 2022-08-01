@@ -31,10 +31,56 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WL7-Mm-0ag">
+                                <rect key="frame" x="16" y="104" width="382" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiV-4g-CHb">
+                                <rect key="frame" x="16" y="137" width="382" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmW-iY-aMt">
+                                <rect key="frame" x="16" y="170" width="382" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6b-hv-piJ">
+                                <rect key="frame" x="16" y="203" width="382" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="L6b-hv-piJ" secondAttribute="trailing" constant="16" id="06h-0d-5wZ"/>
+                            <constraint firstItem="BmW-iY-aMt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="0kN-a3-vY4"/>
+                            <constraint firstItem="L6b-hv-piJ" firstAttribute="top" secondItem="BmW-iY-aMt" secondAttribute="bottom" constant="16" id="5ZB-r2-WZa"/>
+                            <constraint firstItem="WL7-Mm-0ag" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="7uO-98-a9G"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QiV-4g-CHb" secondAttribute="trailing" constant="16" id="Deo-h4-7Ui"/>
+                            <constraint firstItem="QiV-4g-CHb" firstAttribute="top" secondItem="WL7-Mm-0ag" secondAttribute="bottom" constant="16" id="Etb-NV-Fr3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WL7-Mm-0ag" secondAttribute="trailing" constant="16" id="LEf-Ng-fHn"/>
+                            <constraint firstItem="L6b-hv-piJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="REG-7C-dom"/>
+                            <constraint firstItem="QiV-4g-CHb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="RLy-uO-CJg"/>
+                            <constraint firstItem="WL7-Mm-0ag" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="X44-ja-Waa"/>
+                            <constraint firstItem="BmW-iY-aMt" firstAttribute="top" secondItem="QiV-4g-CHb" secondAttribute="bottom" constant="16" id="tIw-X6-mMZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BmW-iY-aMt" secondAttribute="trailing" constant="16" id="zIi-7r-Owo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="User Detail Page" id="Qf8-V9-5lU"/>
+                    <connections>
+                        <outlet property="userAddressLabelOutlet" destination="BmW-iY-aMt" id="fyS-FG-xxk"/>
+                        <outlet property="userCompanyLabelOutlet" destination="L6b-hv-piJ" id="P4e-bw-3XB"/>
+                        <outlet property="userEmailLabelOutlet" destination="QiV-4g-CHb" id="lFR-Dl-8L4"/>
+                        <outlet property="userNameLabelOutlet" destination="WL7-Mm-0ag" id="Pos-0c-bg6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

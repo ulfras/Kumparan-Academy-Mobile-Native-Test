@@ -15,4 +15,12 @@ class KAUsersAPI {
                 completionHandler(response.result)
         }
     }
+    
+    func getUsersKA(id: Int, completionHandler: @escaping (Result<[KAUsersResponseModel], AFError>) -> Void) {
+        let url = "https://jsonplaceholder.typicode.com/users?id=\(id)"
+        AF.request(url, method: .get)
+            .responseDecodable(of: [KAUsersResponseModel].self) { response in
+                completionHandler(response.result)
+        }
+    }
 }
