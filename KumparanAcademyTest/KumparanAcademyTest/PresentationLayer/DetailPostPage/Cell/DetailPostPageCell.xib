@@ -4,20 +4,58 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailPostPageCell" id="KGk-i7-Jjw" customClass="DetailPostPageCell" customModule="KumparanAcademyTest" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailPostPageCell" rowHeight="141" id="KGk-i7-Jjw" customClass="DetailPostPageCell" customModule="KumparanAcademyTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Comment Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8l-qe-CuB">
+                        <rect key="frame" x="16" y="16" width="288" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r6V-ca-EF4">
+                        <rect key="frame" x="16" y="49" width="288" height="76"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <mutableString key="text">Comment Body: Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="c8l-qe-CuB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="3j4-tn-kbP"/>
+                    <constraint firstItem="r6V-ca-EF4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Eux-Fa-4Eg"/>
+                    <constraint firstItem="r6V-ca-EF4" firstAttribute="top" secondItem="c8l-qe-CuB" secondAttribute="bottom" constant="16" id="NtY-E0-O4c"/>
+                    <constraint firstAttribute="trailing" secondItem="r6V-ca-EF4" secondAttribute="trailing" constant="16" id="Vpn-3L-xhp"/>
+                    <constraint firstItem="c8l-qe-CuB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="eLW-U6-4Hu"/>
+                    <constraint firstAttribute="trailing" secondItem="c8l-qe-CuB" secondAttribute="trailing" constant="16" id="ibA-6U-mmg"/>
+                    <constraint firstAttribute="bottom" secondItem="r6V-ca-EF4" secondAttribute="bottom" constant="16" id="jzk-ED-mK1"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="133" y="80"/>
+            <connections>
+                <outlet property="commentAuthorLabelOutlet" destination="c8l-qe-CuB" id="PhX-Sb-8SY"/>
+                <outlet property="postsCommentsBodyTextViewOutlet" destination="r6V-ca-EF4" id="Gn3-6N-0lT"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="97.433035714285708"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

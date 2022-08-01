@@ -16,7 +16,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>ListPostPageViewController</string>
+					<string>ListPostPageTableViewController</string>
 				</dict>
 			</array>
 		</dict>

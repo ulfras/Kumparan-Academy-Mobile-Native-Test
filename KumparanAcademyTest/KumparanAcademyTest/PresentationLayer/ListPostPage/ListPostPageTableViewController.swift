@@ -1,5 +1,5 @@
 //
-//  ListPostPageViewController.swift
+//  ListPostPageTableViewController.swift
 //  KumparanAcademyTest
 //
 //  Created by Maulana Frasha on 01/08/22.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-final class ListPostPageViewController: UITableViewController {
+final class ListPostPageTableViewController: UITableViewController {
     
     @IBOutlet var listPostPageTableViewOutlet: UITableView!
     
     private let callPostsAPI = KAPostsAPI()
     private let callUsersAPI = KAUsersAPI()
-    var postsData: [KAPostsResponseModel] = []
-    var usersData: [KAUsersResponseModel] = []
+    private var postsData: [KAPostsResponseModel] = []
+    private var usersData: [KAUsersResponseModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,19 +80,19 @@ final class ListPostPageViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailPageViewController = UIStoryboard(name: "DetailPostPageViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailPostPageViewController") as! DetailPostPageViewController
+        let detailPostPageViewController = UIStoryboard(name: "DetailPostPageViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailPostPageViewController") as! DetailPostPageViewController
         let postsDataCell = postsData[indexPath.row]
-        detailPageViewController.postIDDetailPage = postsDataCell.id ?? 0
-        detailPageViewController.postTitleDetailPage = postsDataCell.title ?? "Post Title: "
-        detailPageViewController.postBodyDetailPage = postsDataCell.body ?? "Post Body: "
+        detailPostPageViewController.postIDDetailPage = postsDataCell.id ?? 0
+        detailPostPageViewController.postTitleDetailPage = postsDataCell.title ?? "Post Title: "
+        detailPostPageViewController.postBodyDetailPage = postsDataCell.body ?? "Post Body: "
         for _ in postsData {
             for i in usersData {
                 if postsDataCell.userID == i.id {
-                    detailPageViewController.userNameDetailPage = i.name ?? "User Name:"
+                    detailPostPageViewController.userNameDetailPage = i.name ?? "User Name:"
                 }
             }
         }
-        self.navigationController?.pushViewController(detailPageViewController, animated: true)
+        self.navigationController?.pushViewController(detailPostPageViewController, animated: true)
     }
 }
 

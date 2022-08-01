@@ -9,15 +9,14 @@ import UIKit
 
 final class DetailPostPageCell: UITableViewCell {
 
+    @IBOutlet weak var commentAuthorLabelOutlet: UILabel!
+    @IBOutlet weak var postsCommentsBodyTextViewOutlet: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        postsCommentsBodyTextViewOutlet.layer.borderWidth = 1
+        postsCommentsBodyTextViewOutlet.layer.borderColor = UIColor.black.cgColor
+        postsCommentsBodyTextViewOutlet.layer.cornerRadius = 8
+        postsCommentsBodyTextViewOutlet.isEditable = false
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
