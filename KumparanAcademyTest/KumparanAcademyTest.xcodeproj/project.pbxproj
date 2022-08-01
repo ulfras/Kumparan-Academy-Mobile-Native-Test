@@ -11,6 +11,14 @@
 		3154FD1D289830D500A3BD3B /* ListPostPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3154FD1B289830D400A3BD3B /* ListPostPageCell.xib */; };
 		3154FD212898333200A3BD3B /* KAPostsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD202898333200A3BD3B /* KAPostsAPI.swift */; };
 		3154FD252898337F00A3BD3B /* KAPostsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD242898337F00A3BD3B /* KAPostsResponseModel.swift */; };
+		3154FD2728983E6B00A3BD3B /* KAUsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD2628983E6B00A3BD3B /* KAUsersAPI.swift */; };
+		3154FD2928983E9B00A3BD3B /* KAUsersResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD2828983E9B00A3BD3B /* KAUsersResponseModel.swift */; };
+		3154FD2F289851CB00A3BD3B /* DetailPostPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD2E289851CB00A3BD3B /* DetailPostPageViewController.swift */; };
+		3154FD31289852F100A3BD3B /* DetailPostPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3154FD30289852F100A3BD3B /* DetailPostPageViewController.storyboard */; };
+		3154FD3528985C0000A3BD3B /* DetailPostPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD3328985C0000A3BD3B /* DetailPostPageCell.swift */; };
+		3154FD3628985C0000A3BD3B /* DetailPostPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3154FD3428985C0000A3BD3B /* DetailPostPageCell.xib */; };
+		3154FD3828985C8900A3BD3B /* KAPostCommentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD3728985C8900A3BD3B /* KAPostCommentAPI.swift */; };
+		3154FD3A28985D3400A3BD3B /* KAPostCommentResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD3928985D3400A3BD3B /* KAPostCommentResponseModel.swift */; };
 		31ED18C3289829170036C569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED18C2289829170036C569 /* AppDelegate.swift */; };
 		31ED18C5289829170036C569 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED18C4289829170036C569 /* SceneDelegate.swift */; };
 		31ED18C7289829170036C569 /* ListPostPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ED18C6289829170036C569 /* ListPostPageViewController.swift */; };
@@ -25,6 +33,14 @@
 		3154FD1B289830D400A3BD3B /* ListPostPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPostPageCell.xib; sourceTree = "<group>"; };
 		3154FD202898333200A3BD3B /* KAPostsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPostsAPI.swift; sourceTree = "<group>"; };
 		3154FD242898337F00A3BD3B /* KAPostsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPostsResponseModel.swift; sourceTree = "<group>"; };
+		3154FD2628983E6B00A3BD3B /* KAUsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAUsersAPI.swift; sourceTree = "<group>"; };
+		3154FD2828983E9B00A3BD3B /* KAUsersResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAUsersResponseModel.swift; sourceTree = "<group>"; };
+		3154FD2E289851CB00A3BD3B /* DetailPostPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostPageViewController.swift; sourceTree = "<group>"; };
+		3154FD30289852F100A3BD3B /* DetailPostPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailPostPageViewController.storyboard; sourceTree = "<group>"; };
+		3154FD3328985C0000A3BD3B /* DetailPostPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostPageCell.swift; sourceTree = "<group>"; };
+		3154FD3428985C0000A3BD3B /* DetailPostPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPostPageCell.xib; sourceTree = "<group>"; };
+		3154FD3728985C8900A3BD3B /* KAPostCommentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPostCommentAPI.swift; sourceTree = "<group>"; };
+		3154FD3928985D3400A3BD3B /* KAPostCommentResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPostCommentResponseModel.swift; sourceTree = "<group>"; };
 		31ED18BF289829170036C569 /* KumparanAcademyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KumparanAcademyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ED18C2289829170036C569 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31ED18C4289829170036C569 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +87,7 @@
 		3154FD1528982BBD00A3BD3B /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				3154FD2D289851BF00A3BD3B /* DetailPostPage */,
 				3154FD1828982DA000A3BD3B /* ListPostPage */,
 				3154FD1728982BD200A3BD3B /* LaunchScreen */,
 			);
@@ -116,33 +133,47 @@
 		3154FD1E2898330500A3BD3B /* API */ = {
 			isa = PBXGroup;
 			children = (
-				3154FD1F2898331300A3BD3B /* Posts */,
+				3154FD202898333200A3BD3B /* KAPostsAPI.swift */,
+				3154FD2628983E6B00A3BD3B /* KAUsersAPI.swift */,
+				3154FD3728985C8900A3BD3B /* KAPostCommentAPI.swift */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		3154FD1F2898331300A3BD3B /* Posts */ = {
-			isa = PBXGroup;
-			children = (
-				3154FD202898333200A3BD3B /* KAPostsAPI.swift */,
-			);
-			path = Posts;
 			sourceTree = "<group>";
 		};
 		3154FD222898333800A3BD3B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3154FD232898334A00A3BD3B /* PostsModel */,
+				3154FD242898337F00A3BD3B /* KAPostsResponseModel.swift */,
+				3154FD2828983E9B00A3BD3B /* KAUsersResponseModel.swift */,
+				3154FD3928985D3400A3BD3B /* KAPostCommentResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		3154FD232898334A00A3BD3B /* PostsModel */ = {
+		3154FD2A28984BA500A3BD3B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				3154FD242898337F00A3BD3B /* KAPostsResponseModel.swift */,
 			);
-			path = PostsModel;
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		3154FD2D289851BF00A3BD3B /* DetailPostPage */ = {
+			isa = PBXGroup;
+			children = (
+				3154FD3228985BEA00A3BD3B /* Cell */,
+				3154FD2E289851CB00A3BD3B /* DetailPostPageViewController.swift */,
+				3154FD30289852F100A3BD3B /* DetailPostPageViewController.storyboard */,
+			);
+			path = DetailPostPage;
+			sourceTree = "<group>";
+		};
+		3154FD3228985BEA00A3BD3B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3154FD3328985C0000A3BD3B /* DetailPostPageCell.swift */,
+				3154FD3428985C0000A3BD3B /* DetailPostPageCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		31ED18B6289829160036C569 = {
@@ -170,6 +201,7 @@
 				3154FD1628982BC300A3BD3B /* DataLayer */,
 				3154FD1528982BBD00A3BD3B /* PresentationLayer */,
 				3154FD1328982B5700A3BD3B /* Resources */,
+				3154FD2A28984BA500A3BD3B /* Utility */,
 			);
 			path = KumparanAcademyTest;
 			sourceTree = "<group>";
@@ -253,8 +285,10 @@
 			files = (
 				3154FD1D289830D500A3BD3B /* ListPostPageCell.xib in Resources */,
 				31ED18CF289829180036C569 /* LaunchScreen.storyboard in Resources */,
+				3154FD31289852F100A3BD3B /* DetailPostPageViewController.storyboard in Resources */,
 				31ED18CC289829180036C569 /* Assets.xcassets in Resources */,
 				31ED18CA289829170036C569 /* ListPostPageViewController.storyboard in Resources */,
+				3154FD3628985C0000A3BD3B /* DetailPostPageCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,10 +342,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3154FD1C289830D400A3BD3B /* ListPostPageCell.swift in Sources */,
+				3154FD3528985C0000A3BD3B /* DetailPostPageCell.swift in Sources */,
 				3154FD212898333200A3BD3B /* KAPostsAPI.swift in Sources */,
+				3154FD3828985C8900A3BD3B /* KAPostCommentAPI.swift in Sources */,
 				3154FD252898337F00A3BD3B /* KAPostsResponseModel.swift in Sources */,
+				3154FD2F289851CB00A3BD3B /* DetailPostPageViewController.swift in Sources */,
+				3154FD2928983E9B00A3BD3B /* KAUsersResponseModel.swift in Sources */,
 				31ED18C7289829170036C569 /* ListPostPageViewController.swift in Sources */,
+				3154FD3A28985D3400A3BD3B /* KAPostCommentResponseModel.swift in Sources */,
 				31ED18C3289829170036C569 /* AppDelegate.swift in Sources */,
+				3154FD2728983E6B00A3BD3B /* KAUsersAPI.swift in Sources */,
 				31ED18C5289829170036C569 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

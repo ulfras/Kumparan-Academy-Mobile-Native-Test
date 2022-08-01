@@ -5,7 +5,6 @@
 //  Created by Maulana Frasha on 01/08/22.
 //
 
-import Foundation
 import Alamofire
 
 class KAPostsAPI {
