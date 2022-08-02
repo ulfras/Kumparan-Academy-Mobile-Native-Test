@@ -89,7 +89,7 @@ extension DetailPostPageViewController: UITableViewDelegate, UITableViewDataSour
         guard let cell = reusableCell as? DetailPostPageCell else { return reusableCell }
         
         let postCommentDataCell = postCommentData[indexPath.row]
-        cell.isSelected = false
+        cell.selectionStyle = .none
         cell.commentAuthorLabelOutlet.text = "Comment Author: \(postCommentDataCell.name ?? "Comment Author:")"
         cell.postsCommentsBodyTextViewOutlet.text = "Comment Body: \(postCommentDataCell.body ?? "Comment Body:")"
         

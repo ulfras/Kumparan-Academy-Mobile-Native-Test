@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		312B698E289945B400F8125F /* UserDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B698D289945B400F8125F /* UserDetailCollectionViewCell.swift */; };
 		312B6990289945BE00F8125F /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B698F289945BE00F8125F /* UserDetailTableViewCell.swift */; };
+		312B6998289953DB00F8125F /* KAAlbumsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B6997289953DB00F8125F /* KAAlbumsAPI.swift */; };
+		312B699A2899542800F8125F /* KAAlbumsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B69992899542800F8125F /* KAAlbumsResponseModel.swift */; };
+		312B699E2899586000F8125F /* KAPhotosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B699D2899586000F8125F /* KAPhotosAPI.swift */; };
+		312B69A0289958BC00F8125F /* KAPhotosResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B699F289958BC00F8125F /* KAPhotosResponseModel.swift */; };
+		312B69A228996CF900F8125F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B69A128996CF900F8125F /* UIImage+Extension.swift */; };
+		312B69A62899779200F8125F /* UserDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B69A52899779200F8125F /* UserDetailCollectionViewCell.swift */; };
+		312B69A92899795600F8125F /* AlbumDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B69A82899795600F8125F /* AlbumDetailPageViewController.swift */; };
+		312B69AB2899797500F8125F /* AlbumDetailPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312B69AA2899797500F8125F /* AlbumDetailPageViewController.storyboard */; };
 		3154FD1C289830D400A3BD3B /* ListPostPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD1A289830D400A3BD3B /* ListPostPageCell.swift */; };
 		3154FD1D289830D500A3BD3B /* ListPostPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3154FD1B289830D400A3BD3B /* ListPostPageCell.xib */; };
 		3154FD212898333200A3BD3B /* KAPostsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD202898333200A3BD3B /* KAPostsAPI.swift */; };
@@ -33,8 +40,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		312B698D289945B400F8125F /* UserDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		312B698F289945BE00F8125F /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
+		312B6997289953DB00F8125F /* KAAlbumsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAlbumsAPI.swift; sourceTree = "<group>"; };
+		312B69992899542800F8125F /* KAAlbumsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAAlbumsResponseModel.swift; sourceTree = "<group>"; };
+		312B699D2899586000F8125F /* KAPhotosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPhotosAPI.swift; sourceTree = "<group>"; };
+		312B699F289958BC00F8125F /* KAPhotosResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPhotosResponseModel.swift; sourceTree = "<group>"; };
+		312B69A128996CF900F8125F /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		312B69A52899779200F8125F /* UserDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		312B69A82899795600F8125F /* AlbumDetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailPageViewController.swift; sourceTree = "<group>"; };
+		312B69AA2899797500F8125F /* AlbumDetailPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumDetailPageViewController.storyboard; sourceTree = "<group>"; };
 		3154FD1A289830D400A3BD3B /* ListPostPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostPageCell.swift; sourceTree = "<group>"; };
 		3154FD1B289830D400A3BD3B /* ListPostPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPostPageCell.xib; sourceTree = "<group>"; };
 		3154FD202898333200A3BD3B /* KAPostsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPostsAPI.swift; sourceTree = "<group>"; };
@@ -77,10 +91,19 @@
 		312B698C2899459E00F8125F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				312B698D289945B400F8125F /* UserDetailCollectionViewCell.swift */,
 				312B698F289945BE00F8125F /* UserDetailTableViewCell.swift */,
+				312B69A52899779200F8125F /* UserDetailCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		312B69A72899794000F8125F /* AlbumDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				312B69A82899795600F8125F /* AlbumDetailPageViewController.swift */,
+				312B69AA2899797500F8125F /* AlbumDetailPageViewController.storyboard */,
+			);
+			path = AlbumDetailPage;
 			sourceTree = "<group>";
 		};
 		3154FD1328982B5700A3BD3B /* Resources */ = {
@@ -104,10 +127,11 @@
 		3154FD1528982BBD00A3BD3B /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				3154FD3B2898678400A3BD3B /* UserDetailPage */,
+				312B69A72899794000F8125F /* AlbumDetailPage */,
 				3154FD2D289851BF00A3BD3B /* DetailPostPage */,
-				3154FD1828982DA000A3BD3B /* ListPostPage */,
 				3154FD1728982BD200A3BD3B /* LaunchScreen */,
+				3154FD1828982DA000A3BD3B /* ListPostPage */,
+				3154FD3B2898678400A3BD3B /* UserDetailPage */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -154,6 +178,8 @@
 				3154FD202898333200A3BD3B /* KAPostsAPI.swift */,
 				3154FD2628983E6B00A3BD3B /* KAUsersAPI.swift */,
 				3154FD3728985C8900A3BD3B /* KAPostCommentAPI.swift */,
+				312B6997289953DB00F8125F /* KAAlbumsAPI.swift */,
+				312B699D2899586000F8125F /* KAPhotosAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -164,6 +190,8 @@
 				3154FD242898337F00A3BD3B /* KAPostsResponseModel.swift */,
 				3154FD2828983E9B00A3BD3B /* KAUsersResponseModel.swift */,
 				3154FD3928985D3400A3BD3B /* KAPostCommentResponseModel.swift */,
+				312B69992899542800F8125F /* KAAlbumsResponseModel.swift */,
+				312B699F289958BC00F8125F /* KAPhotosResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +199,7 @@
 		3154FD2A28984BA500A3BD3B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				312B69A128996CF900F8125F /* UIImage+Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -318,6 +347,7 @@
 				31ED18CC289829180036C569 /* Assets.xcassets in Resources */,
 				31ED18CA289829170036C569 /* ListPostPageTableViewController.storyboard in Resources */,
 				3154FD3628985C0000A3BD3B /* DetailPostPageCell.xib in Resources */,
+				312B69AB2899797500F8125F /* AlbumDetailPageViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,20 +401,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				3154FD1C289830D400A3BD3B /* ListPostPageCell.swift in Sources */,
+				312B69A92899795600F8125F /* AlbumDetailPageViewController.swift in Sources */,
 				3154FD3528985C0000A3BD3B /* DetailPostPageCell.swift in Sources */,
 				3154FD212898333200A3BD3B /* KAPostsAPI.swift in Sources */,
 				3154FD3828985C8900A3BD3B /* KAPostCommentAPI.swift in Sources */,
-				312B698E289945B400F8125F /* UserDetailCollectionViewCell.swift in Sources */,
+				312B69A0289958BC00F8125F /* KAPhotosResponseModel.swift in Sources */,
 				3154FD252898337F00A3BD3B /* KAPostsResponseModel.swift in Sources */,
+				312B69A228996CF900F8125F /* UIImage+Extension.swift in Sources */,
+				312B6998289953DB00F8125F /* KAAlbumsAPI.swift in Sources */,
 				3154FD2F289851CB00A3BD3B /* DetailPostPageViewController.swift in Sources */,
 				3154FD2928983E9B00A3BD3B /* KAUsersResponseModel.swift in Sources */,
 				31ED18C7289829170036C569 /* ListPostPageTableViewController.swift in Sources */,
 				3154FD3A28985D3400A3BD3B /* KAPostCommentResponseModel.swift in Sources */,
+				312B699A2899542800F8125F /* KAAlbumsResponseModel.swift in Sources */,
 				312B6990289945BE00F8125F /* UserDetailTableViewCell.swift in Sources */,
 				31ED18C3289829170036C569 /* AppDelegate.swift in Sources */,
 				3154FD3D289867A600A3BD3B /* UserDetailPageViewController.swift in Sources */,
 				3154FD2728983E6B00A3BD3B /* KAUsersAPI.swift in Sources */,
 				31ED18C5289829170036C569 /* SceneDelegate.swift in Sources */,
+				312B69A62899779200F8125F /* UserDetailCollectionViewCell.swift in Sources */,
+				312B699E2899586000F8125F /* KAPhotosAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

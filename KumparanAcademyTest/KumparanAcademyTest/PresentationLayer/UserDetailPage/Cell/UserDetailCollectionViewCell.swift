@@ -7,6 +7,7 @@
 
 import UIKit
 
-final class UserDetailCollectionViewCell: UICollectionViewCell {
+class UserDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var tumbhnailImageOutlet: UIImageView!
+    
 }

@@ -8,8 +8,8 @@
 import UIKit
 
 final class UserDetailTableViewCell: UITableViewCell {
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var albumNameLabelOutlet: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
 }
 
 extension UserDetailTableViewCell {
