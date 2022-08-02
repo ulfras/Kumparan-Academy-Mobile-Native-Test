@@ -7,11 +7,16 @@
 
 import UIKit
 
-final class PhotoDetailPageViewController: UIViewController {
+protocol SubclassedDelegate: AnyObject {
+    func zooming(started: Bool)
+}
+
+final class PhotoDetailPageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var fullSizePhotoImageOutlet: UIImageView!
     @IBOutlet weak var photoTitleLabelOutlet: UILabel!
     
+    weak var delegate: SubclassedDelegate?
     var photoName: String = ""
     var photoOriginalURL: String = ""
     
@@ -20,5 +25,21 @@ final class PhotoDetailPageViewController: UIViewController {
         fullSizePhotoImageOutlet.layer.cornerRadius = 16
         fullSizePhotoImageOutlet.setImageFrom(photoOriginalURL)
         photoTitleLabelOutlet.text = photoName
+        addGesture()
+    }
+    
+    private func addGesture() {
+        fullSizePhotoImageOutlet.isUserInteractionEnabled = true
+        let pinchGesture = UIPinchGestureRecognizer(
+            target: self,
+            action: #selector(self.didPinch))
+        fullSizePhotoImageOutlet.addGestureRecognizer(pinchGesture)
+    }
+    
+    @objc private func didPinch(_ gesture: UIPinchGestureRecognizer) {
+        gesture.view?.transform = (gesture.view?.transform.scaledBy(
+            x: gesture.scale,
+            y: gesture.scale))!
+        gesture.scale = 1.0
     }
 }
