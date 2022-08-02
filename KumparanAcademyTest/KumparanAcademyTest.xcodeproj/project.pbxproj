@@ -16,6 +16,7 @@
 		312B69A62899779200F8125F /* UserDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B69A52899779200F8125F /* UserDetailCollectionViewCell.swift */; };
 		312B69A92899795600F8125F /* AlbumDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B69A82899795600F8125F /* AlbumDetailPageViewController.swift */; };
 		312B69AB2899797500F8125F /* AlbumDetailPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312B69AA2899797500F8125F /* AlbumDetailPageViewController.storyboard */; };
+		312B69AD28997D8E00F8125F /* AlbumDetailCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B69AC28997D8E00F8125F /* AlbumDetailCollectionCell.swift */; };
 		3154FD1C289830D400A3BD3B /* ListPostPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD1A289830D400A3BD3B /* ListPostPageCell.swift */; };
 		3154FD1D289830D500A3BD3B /* ListPostPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3154FD1B289830D400A3BD3B /* ListPostPageCell.xib */; };
 		3154FD212898333200A3BD3B /* KAPostsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD202898333200A3BD3B /* KAPostsAPI.swift */; };
@@ -49,6 +50,7 @@
 		312B69A52899779200F8125F /* UserDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		312B69A82899795600F8125F /* AlbumDetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailPageViewController.swift; sourceTree = "<group>"; };
 		312B69AA2899797500F8125F /* AlbumDetailPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumDetailPageViewController.storyboard; sourceTree = "<group>"; };
+		312B69AC28997D8E00F8125F /* AlbumDetailCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailCollectionCell.swift; sourceTree = "<group>"; };
 		3154FD1A289830D400A3BD3B /* ListPostPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostPageCell.swift; sourceTree = "<group>"; };
 		3154FD1B289830D400A3BD3B /* ListPostPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPostPageCell.xib; sourceTree = "<group>"; };
 		3154FD202898333200A3BD3B /* KAPostsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPostsAPI.swift; sourceTree = "<group>"; };
@@ -100,10 +102,26 @@
 		312B69A72899794000F8125F /* AlbumDetailPage */ = {
 			isa = PBXGroup;
 			children = (
-				312B69A82899795600F8125F /* AlbumDetailPageViewController.swift */,
+				312B69AE28997DAE00F8125F /* Cell */,
 				312B69AA2899797500F8125F /* AlbumDetailPageViewController.storyboard */,
+				312B69A82899795600F8125F /* AlbumDetailPageViewController.swift */,
 			);
 			path = AlbumDetailPage;
+			sourceTree = "<group>";
+		};
+		312B69AE28997DAE00F8125F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				312B69AC28997D8E00F8125F /* AlbumDetailCollectionCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		312B69AF289983A700F8125F /* PhotoDetailPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoDetailPage;
 			sourceTree = "<group>";
 		};
 		3154FD1328982B5700A3BD3B /* Resources */ = {
@@ -127,6 +145,7 @@
 		3154FD1528982BBD00A3BD3B /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				312B69AF289983A700F8125F /* PhotoDetailPage */,
 				312B69A72899794000F8125F /* AlbumDetailPage */,
 				3154FD2D289851BF00A3BD3B /* DetailPostPage */,
 				3154FD1728982BD200A3BD3B /* LaunchScreen */,
@@ -418,6 +437,7 @@
 				31ED18C3289829170036C569 /* AppDelegate.swift in Sources */,
 				3154FD3D289867A600A3BD3B /* UserDetailPageViewController.swift in Sources */,
 				3154FD2728983E6B00A3BD3B /* KAUsersAPI.swift in Sources */,
+				312B69AD28997D8E00F8125F /* AlbumDetailCollectionCell.swift in Sources */,
 				31ED18C5289829170036C569 /* SceneDelegate.swift in Sources */,
 				312B69A62899779200F8125F /* UserDetailCollectionViewCell.swift in Sources */,
 				312B699E2899586000F8125F /* KAPhotosAPI.swift in Sources */,
