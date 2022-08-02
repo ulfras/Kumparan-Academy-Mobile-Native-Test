@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312B698E289945B400F8125F /* UserDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B698D289945B400F8125F /* UserDetailCollectionViewCell.swift */; };
+		312B6990289945BE00F8125F /* UserDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312B698F289945BE00F8125F /* UserDetailTableViewCell.swift */; };
 		3154FD1C289830D400A3BD3B /* ListPostPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD1A289830D400A3BD3B /* ListPostPageCell.swift */; };
 		3154FD1D289830D500A3BD3B /* ListPostPageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3154FD1B289830D400A3BD3B /* ListPostPageCell.xib */; };
 		3154FD212898333200A3BD3B /* KAPostsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154FD202898333200A3BD3B /* KAPostsAPI.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		312B698D289945B400F8125F /* UserDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		312B698F289945BE00F8125F /* UserDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailTableViewCell.swift; sourceTree = "<group>"; };
 		3154FD1A289830D400A3BD3B /* ListPostPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPostPageCell.swift; sourceTree = "<group>"; };
 		3154FD1B289830D400A3BD3B /* ListPostPageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPostPageCell.xib; sourceTree = "<group>"; };
 		3154FD202898333200A3BD3B /* KAPostsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAPostsAPI.swift; sourceTree = "<group>"; };
@@ -70,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		312B698C2899459E00F8125F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				312B698D289945B400F8125F /* UserDetailCollectionViewCell.swift */,
+				312B698F289945BE00F8125F /* UserDetailTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3154FD1328982B5700A3BD3B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +197,7 @@
 		3154FD3B2898678400A3BD3B /* UserDetailPage */ = {
 			isa = PBXGroup;
 			children = (
+				312B698C2899459E00F8125F /* Cell */,
 				3154FD3C289867A600A3BD3B /* UserDetailPageViewController.swift */,
 				3154FD3E289867B400A3BD3B /* UserDetailPageViewController.storyboard */,
 			);
@@ -360,11 +374,13 @@
 				3154FD3528985C0000A3BD3B /* DetailPostPageCell.swift in Sources */,
 				3154FD212898333200A3BD3B /* KAPostsAPI.swift in Sources */,
 				3154FD3828985C8900A3BD3B /* KAPostCommentAPI.swift in Sources */,
+				312B698E289945B400F8125F /* UserDetailCollectionViewCell.swift in Sources */,
 				3154FD252898337F00A3BD3B /* KAPostsResponseModel.swift in Sources */,
 				3154FD2F289851CB00A3BD3B /* DetailPostPageViewController.swift in Sources */,
 				3154FD2928983E9B00A3BD3B /* KAUsersResponseModel.swift in Sources */,
 				31ED18C7289829170036C569 /* ListPostPageTableViewController.swift in Sources */,
 				3154FD3A28985D3400A3BD3B /* KAPostCommentResponseModel.swift in Sources */,
+				312B6990289945BE00F8125F /* UserDetailTableViewCell.swift in Sources */,
 				31ED18C3289829170036C569 /* AppDelegate.swift in Sources */,
 				3154FD3D289867A600A3BD3B /* UserDetailPageViewController.swift in Sources */,
 				3154FD2728983E6B00A3BD3B /* KAUsersAPI.swift in Sources */,
