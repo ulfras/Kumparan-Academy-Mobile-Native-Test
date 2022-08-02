@@ -51,6 +51,14 @@ extension AlbumDetailPageViewController: UICollectionViewDataSource, UICollectio
         reuseCollectionCell.photosNameLabelOutlet.text = photosDataCell.title
         return reuseCollectionCell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photoDetailPageViewController = UIStoryboard(name: "PhotoDetailPageViewController", bundle: nil).instantiateViewController(withIdentifier: "PhotoDetailPageViewController") as! PhotoDetailPageViewController
+        let photosDataCell = photosData[indexPath.row]
+        photoDetailPageViewController.photoName = photosDataCell.title ?? ""
+        photoDetailPageViewController.photoOriginalURL = photosDataCell.url ?? ""
+        self.navigationController?.pushViewController(photoDetailPageViewController, animated: true)
+    }
 }
 
 extension AlbumDetailPageViewController: UICollectionViewDelegateFlowLayout {
