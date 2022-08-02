@@ -19,7 +19,7 @@ final class UserDetailPageViewController: UIViewController {
     private let callAlbumsAPI = KAAlbumsAPI()
     private let callPhotosAPI = KAPhotosAPI()
     private var albumsData: [KAAlbumsResponseModel] = []
-    private var photosData: [KAPhotosResponseModel] = []
+//    private var photosData: [KAPhotosResponseModel] = []
     var userIDUserDetailPage: Int = 0
     var storedOffsets = [Int: CGFloat]()
     
@@ -44,17 +44,17 @@ final class UserDetailPageViewController: UIViewController {
             case let .success(data):
                 self.albumsData.append(contentsOf: data)
                 self.userDetailTableViewOutlet.reloadData()
-                for albumsDatum in self.albumsData {
-                    self.callPhotosAPI.getPhotosKA(id: albumsDatum.id!) { result in
-                        switch result {
-                        case let .success(data):
-                            self.photosData.append(contentsOf: data)
-                            self.userDetailTableViewOutlet.reloadData()
-                        case let .failure(err):
-                            print(err.localizedDescription)
-                        }
-                    }
-                }
+//                for albumsDatum in self.albumsData {
+//                    self.callPhotosAPI.getPhotosKA(id: albumsDatum.id!) { result in
+//                        switch result {
+//                        case let .success(data):
+//                            self.photosData.append(contentsOf: data)
+//                            self.userDetailTableViewOutlet.reloadData()
+//                        case let .failure(err):
+//                            print(err.localizedDescription)
+//                        }
+//                    }
+//                }
             case let .failure(err):
                 print(err.localizedDescription)
             }
