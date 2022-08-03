@@ -19,7 +19,7 @@ final class UserDetailPageViewController: UIViewController {
     private let callAlbumsAPI = KAAlbumsAPI()
     private let callPhotosAPI = KAPhotosAPI()
     private var albumsData: [KAAlbumsResponseModel] = []
-//    private var photosData: [KAPhotosResponseModel] = []
+    private var photosData: [KAPhotosResponseModel] = []
     var userIDUserDetailPage: Int = 0
     var storedOffsets = [Int: CGFloat]()
     
@@ -44,17 +44,16 @@ final class UserDetailPageViewController: UIViewController {
             case let .success(data):
                 self.albumsData.append(contentsOf: data)
                 self.userDetailTableViewOutlet.reloadData()
-//                for albumsDatum in self.albumsData {
-//                    self.callPhotosAPI.getPhotosKA(id: albumsDatum.id!) { result in
-//                        switch result {
-//                        case let .success(data):
-//                            self.photosData.append(contentsOf: data)
-//                            self.userDetailTableViewOutlet.reloadData()
-//                        case let .failure(err):
-//                            print(err.localizedDescription)
-//                        }
-//                    }
-//                }
+            case let .failure(err):
+                print(err.localizedDescription)
+            }
+        }
+        
+        callPhotosAPI.getPhotosKA { result in
+            switch result {
+            case let .success(data):
+                self.photosData.append(contentsOf: data)
+                self.userDetailTableViewOutlet.reloadData()
             case let .failure(err):
                 print(err.localizedDescription)
             }
@@ -111,16 +110,15 @@ extension UserDetailPageViewController: UITableViewDelegate, UITableViewDataSour
 extension UserDetailPageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-///        this code have an error with the first table cell return 0
-//        var num = 0
-//        for photosDatum in photosData {
-//            if photosDatum.albumID == collectionView.tag {
-//                let a = 0
-//                num = a + 1
-//            }
-//        }
-//        return num
-        return 50
+        var num = 0
+        for photosDatum in photosData {
+            for albumDatum in albumsData{
+                if photosDatum.albumID == albumDatum.id {
+                    num = num + 1
+                }
+            }
+        }
+        return num / albumsData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
